@@ -7,4 +7,6 @@ import Foundation
 
 func chapterThree() {
     // Your portion of the story goes here
+    print("Chapter 3")
+    print("the return to earth")
 }
