@@ -33,9 +33,11 @@ func missionObjectives() {
     
 }
 
-print("chapter 3: life on mars")
-print("this is jackelyn's branch")
-print(" ")
-printAstronautNames()
-
-print(missionLandingSuccess)
+func chapterThree() {
+    print("chapter 3: life on mars")
+    print("this is jackelyn's branch")
+    print(" ")
+    printAstronautNames()
+    
+    print(missionLandingSuccess)
+}
