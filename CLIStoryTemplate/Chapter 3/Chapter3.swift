@@ -67,18 +67,18 @@ func astronautNames() {
 
 func missionObjectives() {
     print("Mission Objectives:")
-    crewLanding[1]
+    print(crewLanding[1])
 //    sleep(1)
-    buildSmarBase[0]
-    scientificExploration[0]
+    print(buildSmarBase[0])
+    print(scientificExploration[0])
 //    sleep(1)
-    ironOxidesFound[0]
+    print(ironOxidesFound[0])
 //    sleep(1)
-    perchlorateDepositsFound[0]
+    print(perchlorateDepositsFound[0])
 //    sleep(1)
-    smarModuleCapibilities[0]
+    print(smarModuleCapibilities[0])
 //    sleep(1)
-    bringComponentsEarth[0]
+    print(bringComponentsEarth[0])
 //    sleep(1)
 }
 
