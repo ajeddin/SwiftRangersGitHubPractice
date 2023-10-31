@@ -7,39 +7,22 @@ import Foundation
 //Backstory : Climate crisis, icecaps are melting, one of them contained a virus that is affecting people. Scientists found that it is from an extraterrestrial planet called Smar. Scientists discovered that the potion or antidote for the virus is located on another extraterrestrial planets
 func chapterOne() {
     print("There will be multiple steps to authenticate identity")
-    print("Please input year hint (100000101001): ")
+    var ranNum1 = Int.random(in: 0...100)
+    var ranNum2 = Int.random(in: 0...100)
+    print(ranNum1,ranNum2)
+    print("Please solve this calculation: \(ranNum1) + \(ranNum2)")
     if var yearStart = readLine() {
-        while yearStart != "2098" {
-            print("Wrong year, try again")
-            print("Please input year hint (100000101001): ")
+        while yearStart != String(ranNum1+ranNum2) {
+            print("Wrong answer, try again")
+            print("Please solve this calculation: \(ranNum1) + \(ranNum2)")
             if let input = readLine() {
                 yearStart = input
             }
         }
     }
-    print("Please decrypt security key seperated by space (100100011100 110101100001 1100010101101100000101 101001101011111 101010110)")
-//    if var authCode = readLine() {
-//        while authCode != "@#QSaAS" {
-//            print("WRONG CODE")
-//            print("(01000000 00100011 01010001 01010011 01100001 01000001 01010011): ")
-//            if let input = readLine() {
-//                authCode = input
-//            }
-//        }
-//    }
-    if var authCode = readLine() {
-        while authCode != "2332 3425 3234565 21343 342" {
-            print("WRONG CODE")
-            print("(100100011100 110101100001 1100010101101100000101 101001101011111 101010110): ")
-            if let input = readLine() {
-                authCode = input
-            }
-        }
-    }
-    print("Successfully Authenticated")
-
+    var infectionPlanets = ["Smar","Oamena","Verzyai"]
+    let infectionPlanet = infectionPlanets[Int.random(in: 0...2)]
     
-    let infectionPlanet = "Smar"
 print("As the climate crisis intensified, the Earth's ice caps were melting at an alarming rate. It wasn't just the rising sea levels and extreme weather events that worried scientists now. It was the revelation that one of the ancient ice caps contained a virus, a virus unlike anything ever seen before. Its origin? An extraterrestrial planet called \(infectionPlanet).")
 //    
     print("""
