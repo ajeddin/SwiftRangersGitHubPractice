@@ -1,4 +1,4 @@
-//
+
 //  Chapter4.swift
 //  CLIStoryTemplate
 //
@@ -101,12 +101,70 @@ struct Alien {
     
     var  HowardJr = (age: 21, temper: "angry")
         
+        
+        func negotiatesThreats(){
+            print("reverse the effects of the cure")
+            print("steal the earth's water supply")
+            print("transform domesticated animals feral")
+            print("increase taxes")
+        }
+    }
+    
+    
+    
 
-    func negotiatesThreats(){
-        print("reverse the effects of the cure")
-        print("steal the earth's water supply")
-        print("transform domesticated animals feral")
-        print("increase taxes")
+enum RiskLevelOfThreats {
+    case high75
+    case midlevel47
+    case low4
+}
+
+func decision(riskLevelOfThreats: RiskLevelOfThreats) {
+    switch riskLevelOfThreats {
+    case .high75:
+        print("Tell the Howardans no.. why would we reverse the effects of the cure or let them steal our water? Rabid animals are off of the table too.")
+    case .midlevel47:
+        print("We might have to deal with enflated taxes.. Man I'm already low")
+    case .low4:
+        print("Let's stage a coup and overthrow the Howardans!")
     }
 }
 
+enum AlienSpaceshipTypes {
+    case Zoomer
+    case LightSpeed3x
+    case Soundbreaker
+}
+
+func runsTheShip(spaceshipMakeup: AlienSpaceshipTypes) {
+    switch spaceshipMakeup {
+    case .Zoomer:
+        print("The fastest alien spaceship in the Universe, moving over 100x the speed of light")
+    case .LightSpeed3x:
+        print("The second fastest spaceship in the Universe, moving 3x the speed of light.")
+    case .Soundbreaker:
+        print("The first UFO to reach lightspeed.")
+        
+        
+    }
+}
+func warnTheAstronauts () {
+    let Alien = "The Astronauts are in danger"
+    
+    if Alien == "The Astronauts are in danger" {
+        print("Astrobiologist Sarah Larson has an idea..")
+        
+        if Alien == "The Astronauts are in danger"{
+            print ("They only have one week to prepare")
+        }
+    }
+}
+func printStory(_ string: String){
+    
+    for i in string{
+        print("\(i)", terminator: "")
+        
+        var hello = ( "On Their way back to earth, the astronauts caught a wave unfortunate events, suchh as surviving through a damaged oxidizer in the middle of space. After returning to earth, Sarah Larson directed the crew to evaporate the liquid into a gaseous form and release it into the atomsphere as it's range would multiply as it absorbs oxygen. The crew does as instructed which ended up saving the planet from famine.. Or so they thought. Unfortunately, because of the nature in which they obtained their cure, an alien known as Howard Jr. has come to earth seeking retribution. Astrobiologist Sarah Larson has an idea which could save the earth from Howard's threats, but there is no guarantee of it's success.")
+        
+    }
+}
