@@ -1,11 +1,11 @@
 //
 //  Chapter3.swift
 //  CLIStoryTemplate
+//  jackelyn's chapter
 //
 import Foundation
 
-var perchlorateChemicalEquation = "2 ClO₄⁻ (perchlorate ions) → Cl₂ (chlorine gas) + 2 O₂ (oxygen gas)"
-
+//will print out the roles and tools each astronaut uses for geolocigal samples
 struct Astronaut {
     var name: String
     var role: String
@@ -17,7 +17,6 @@ struct Astronaut {
     }
 }
 
-
 //prints the story upon landing on smar
 let missionLandingSuccess =
 """
@@ -28,7 +27,6 @@ The \(serviceModule) has made contact with Houston, confirming the successful la
 A reporter from Channel 32 couldn't help but inquire, "Was there any doubt about the crew's success in this critical endeavor?" NASA press secretary Maryenne Wilson promptly responded, "Mission Commander \(astronautCommander) is a seasoned pilot from the Artemis program, instilled a high degree of confidence in the mission's success. However, the complexities and obstacles mainly emanated from the \(infectionPlanet)’s terrain."
 """
 
-
 //tells the story of the building of the hab for the Smar base
 let buildingHab =
 """
@@ -36,7 +34,7 @@ As the intrepid crew touched down on the \(infectionPlanet), they quickly realiz
 
 The habitat modules had beamed down ahead of the crew's arrival, and it was up to the \(pilot) as the crew’s pilot to do transport on the \(ssamModule) (SSAM), taking them from the landing zone on \(landingSite) to the carefully chosen HAB Base location, \(habBase). And what were these marvelous modules, you ask? Well, they had a galley (the kitchen and command center), cozy living quarters, and the EVA (Extravehicular Activity) Prep Area, where astronauts would suit up for strolls in the great \(infectionPlanet) neighborhood.
 
-\(missionSpecialistOne), the mission specialist, was ready to take the rover for a spin, expertly carting the modules to their new stomping grounds. And because no one goes solo in space, \(missionSpecialistTwo) lent a hand in the module-moving operation. And sure, it might be smaller than your average subway car, but hey, it's their new home for the foreseeable future!
+\(missionSpecialistOne), the mission specialist, was ready to take the rover for a spin, expertly carting the modules to the base. And because no one goes solo in space, \(missionSpecialistTwo) lent a hand in the module-moving operation. And sure, it might be smaller than your average subway car, but hey, it's their new home for the foreseeable future!
 
 And as the sun sets on this eventful day, the crew gathers 'round for some hearty MREs (Meals, Ready-to-Eat) – because even in the cosmos, there's no resisting the call of a meal.
 """
@@ -75,6 +73,7 @@ Crew has collected the following:
 let dayFourActivitiesPtTwo =
 """
 The crew has surmised the following:
+
 After \(missionSpecialistOne) analyzed the samples for any evidence of of carbon-based life structures, the results were bleak. Despite the planet's unique geological compositions, it is abscent of any signs of carbon-based life structures.
 
 Our detailed examination revealed a composition rich in iron oxides and perchlorate deposits, but the absence of organic molecules or any signs of past or present carbon-based life. While the planet's geology and chemistry are fascinating, it appears that \(infectionPlanet) may not host the intricate web of life we had hoped to discover.
@@ -88,6 +87,7 @@ Our detailed examination revealed a composition rich in iron oxides and perchlor
 Perchlorates are known for their oxygen-rich properties, making them valuable resources for the generation of rocket fuel.
 
 HAB Module Capabilities:
+
 The HAB on \(habBase) can sustain life for future missions to \(infectionPlanet), and the layout of the HAB connection points will ensure further expansion.
 """
 
@@ -123,6 +123,10 @@ let astronaut3 = Astronaut(name: "Christina Koch", role: "Mission Specialist I",
 
 let astronaut4 = Astronaut(name: "Jeremy Hansen", role: "Mission Specialist II", tools: [Astronaut.Tool(name: "Data Entry", purpose: "Filing geolocigal samples")])
 
+// for paragraph skip, easier legibility
+func spaceSkip() {
+    print(" ")
+}
 
 //prints the names of the astronauts when used
 func astronautNames() {
@@ -208,15 +212,9 @@ func missionObjectivesDaySix() {
     print(bringComponentsEarth[1])
 }
 
-
-func spaceSkip() {
-    print(" ")
-}
-
 func accessPurposes() {
     print("Astronaut Name: \(astronaut1.name)")
     print("Astronaut Role: \(astronaut1.role)")
-
     for tool in astronaut1.tools {
         print("Tool Name: \(tool.name)")
         print("Tool Purpose: \(tool.purpose)")
@@ -247,13 +245,15 @@ func accessPurposes() {
     }
 }
 
-
+func celebrateAntidote() -> String? {
+    return "Let's celebrate this monumental occasion. Not only did we achieve all of our objectives, but we also have moments to enjoy the journey to a new planet"
+}
 
 func dayOne() {
     sleep(1)
     spaceSkip()
     astronautNames()
-    sleep(2)
+    sleep(1)
     spaceSkip()
     print(missionLandingSuccess)
     spaceSkip()
@@ -271,8 +271,9 @@ func dayOne() {
             print("Error reading input. Please try again.")
         }
     }
+    spaceSkip()
     missionObjectivesDayOne()
-    sleep(2)
+    sleep(1)
     spaceSkip()
     print(buildingHab)
 }
@@ -295,7 +296,7 @@ func dayTwo() {
     }
     spaceSkip()
     missionObjectivesDayTwo()
-    sleep(2)
+    sleep(1)
     spaceSkip()
     print(dayTwoActivities)
 }
@@ -320,7 +321,7 @@ func dayThree() {
     }
     spaceSkip()
     missionObjectivesDayThree()
-    sleep(2)
+    sleep(1)
     spaceSkip()
     print(dayThreeActivities)
 }
@@ -345,10 +346,11 @@ func dayFour() {
     }
     spaceSkip()
     missionObjectivesDayFour()
-    sleep(2)
+    sleep(1)
     spaceSkip()
     print(dayFourActivitiesPtOne)
     accessPurposes()
+    spaceSkip()
     print(dayFourActivitiesPtTwo)
 }
 
@@ -366,10 +368,12 @@ func dayFive() {
         switch userInput.lowercased() {
         case "tharsis plateau":
             print("Day 5: Sunrise at \(landingSite)")
+            spaceSkip()
             print(sunsetTharsis)
             spaceSkip()
         case "deimos ridge":
             print("Day 5: Sunrise at \(habBase)")
+            spaceSkip()
             print(sunsetDeimos)
             spaceSkip()
         default:
@@ -380,17 +384,28 @@ func dayFive() {
     }
 }
 
-
+func daySix() {
+    spaceSkip()
+    missionObjectivesDaySix()
+    spaceSkip()
+    if var celebrateAntidote = celebrateAntidote() {
+        print("Alright: \(celebrateAntidote)")
+        celebrateAntidote = "party"
+    }
+    print("Day 6: Sunrise at \(crewModule)")
+}
 
 func chapterThree() {
     spaceSkip()
     spaceSkip()
-    sleep(2)
+    sleep(1)
     print("chapter 3: life on mars")
-    sleep(2)
+    sleep(1)
     dayOne()
     dayTwo()
     dayThree()
     dayFour()
     dayFive()
+    daySix()
+    
 }
