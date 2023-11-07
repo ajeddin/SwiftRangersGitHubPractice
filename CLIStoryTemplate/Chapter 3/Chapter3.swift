@@ -385,14 +385,16 @@ func dayFive() {
 }
 
 func daySix() {
+    
     spaceSkip()
     missionObjectivesDaySix()
+    spaceSkip()
+    print("Day 6: Sunrise at \(crewModule)")
     spaceSkip()
     if var celebrateAntidote = celebrateAntidote() {
         print("Alright: \(celebrateAntidote)")
         celebrateAntidote = "party"
     }
-    print("Day 6: Sunrise at \(crewModule)")
 }
 
 func chapterThree() {

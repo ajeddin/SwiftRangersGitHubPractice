@@ -12,7 +12,7 @@ func chapterOne() {
     print("There will be multiple steps to authenticate identity")
     var ranNum1 = Int.random(in: 0...100)
     var ranNum2 = Int.random(in: 0...100)
-    print(ranNum1,ranNum2)
+//    print(ranNum1,ranNum2)
     print("Please solve this calculation: \(ranNum1) + \(ranNum2)")
     if var yearStart = readLine() {
         while yearStart != String(ranNum1+ranNum2) {
@@ -34,12 +34,12 @@ func chapterOne() {
     let infectionPlanetChoice = infectionPlanets[Int.random(in: 0...2)]
     let planet = PlanetStruct(planetName: infectionPlanetChoice )
     var infectionPlanet = planet.planetName
-print(infectionPlanet)
 sleep(1)
     func printCLI(_ string: String){
-//        var sepString = string.split(separator: "")
-        for i in string{
-            print("\(i)", terminator: "")
+        var sepString = string.split(separator: " ")
+        for i in sepString{
+            print("\(i) ", terminator: "")
+    
             Thread.sleep(forTimeInterval: 0.1)        }
     }
     
