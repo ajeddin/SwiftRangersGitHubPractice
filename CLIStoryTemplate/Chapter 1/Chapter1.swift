@@ -6,6 +6,9 @@
 import Foundation
 //Backstory : Climate crisis, icecaps are melting, one of them contained a virus that is affecting people. Scientists found that it is from an extraterrestrial planet called Smar. Scientists discovered that the potion or antidote for the virus is located on another extraterrestrial planets
 func chapterOne() {
+    struct PlanetStruct{
+        let planetName : Planets
+    }
     print("There will be multiple steps to authenticate identity")
     var ranNum1 = Int.random(in: 0...100)
     var ranNum2 = Int.random(in: 0...100)
@@ -20,15 +23,18 @@ func chapterOne() {
             }
         }
     }
+//    var planet = PlanetStruct(planetName: infectionPlanet )
     enum Planets {
         case Smar
         case Oamena
         case Verzyai
     }
 
-    var infectionPlanets : [Planets] = [.Smar, .Oamena, .Verzyai]
-    let infectionPlanet = infectionPlanets[Int.random(in: 0...2)]
-    
+    let infectionPlanets : [Planets] = [.Smar, .Oamena, .Verzyai]
+    let infectionPlanetChoice = infectionPlanets[Int.random(in: 0...2)]
+    let planet = PlanetStruct(planetName: infectionPlanetChoice )
+    var infectionPlanet = planet.planetName
+print(infectionPlanet)
 sleep(1)
     func printCLI(_ string: String){
 //        var sepString = string.split(separator: "")
