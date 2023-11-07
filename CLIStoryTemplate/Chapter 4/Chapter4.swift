@@ -1,4 +1,4 @@
-
+//
 //  Chapter4.swift
 //  CLIStoryTemplate
 //
@@ -145,6 +145,11 @@ func runsTheShip(spaceshipMakeup: AlienSpaceshipTypes) {
     case .Soundbreaker:
         print("The first UFO to reach lightspeed.")
         
+        let alienUFO: String? = "alien spaceship"
+        if let UFO = alienUFO {
+            print(UFO)
+        }
+        
         
     }
 }
@@ -164,7 +169,29 @@ func printStory(_ string: String){
     for i in string{
         print("\(i)", terminator: "")
         
-        var hello = ( "On Their way back to earth, the astronauts caught a wave unfortunate events, suchh as surviving through a damaged oxidizer in the middle of space. After returning to earth, Sarah Larson directed the crew to evaporate the liquid into a gaseous form and release it into the atomsphere as it's range would multiply as it absorbs oxygen. The crew does as instructed which ended up saving the planet from famine.. Or so they thought. Unfortunately, because of the nature in which they obtained their cure, an alien known as Howard Jr. has come to earth seeking retribution. Astrobiologist Sarah Larson has an idea which could save the earth from Howard's threats, but there is no guarantee of it's success.")
+        var hello = ( "On Their way back to earth, the astronauts caught a wave unfortunate events, suchh as surviving through a damaged oxidizer in the middle of space. After returning to earth, Sarah Larson directed the crew to evaporate the liquid into a gaseous form and release it into the atomsphere as it's range would multiply as it absorbs oxygen. The crew does as instructed which ended up saving the planet from famine.. Or so they thought. Unfortunately, because of the nature in which they obtained their cure, an alien known as Howard Jr. has come to earth seeking retribution. Astrobiologist Sarah Larson has an idea which could save the earth from Howard's threats, but there is no guarantee of it's success. Unfortunately for the astronauts, the aliens had already activated their EMP to disrupt their communications!")
         
     }
 }
+let myBool: Bool = false
+
+var myOtherBool: Bool? = nil
+
+let computerActivated = myOtherBool
+
+let computerDeactivated: Bool = myOtherBool ?? false
+
+enum spaceshipComputer {
+    
+    case activated
+    case spaceshipComputerstatus
+    case systemConfused
+    
+    func knockSignals(){
+        let spaceshipComputerStatus = spaceshipComputer.systemConfused
+        print("All communication networks are down!")
+        
+        
+        
+        
+    } }
