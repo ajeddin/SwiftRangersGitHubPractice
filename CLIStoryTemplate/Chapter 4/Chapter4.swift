@@ -10,7 +10,7 @@ func chapterFour() {
     let cure = "Administered"
     let ourName = "Spaceranger"
 
-    var cure = "Vitamin AVMS"
+   
     var missionPieces: [String] = ["cure", "fuel", "Dosage"]
     var cureDose: Int = 10
     let toolsNeeded = ["spray-on adhesive", "oxygen source"]
